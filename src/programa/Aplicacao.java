@@ -11,7 +11,7 @@ public static void main(String[] args){
     System.out.println("Quantos candidatos? ");
     Integer totCandidatos = sc.nextInt();
     sc.nextLine();
-    ArrayList[][] candidados = new ArrayList[totCandidatos][2];
+    Candidatos[][] candidados = new Candidatos[totCandidatos][2];
 
     for(int i = 0; i<totCandidatos; i++){
         System.out.print("Digite o nome do participante e o codigo: ");
@@ -21,7 +21,7 @@ public static void main(String[] args){
        
     }
     System.out.println("Qual participante quer que ganhe?");
-    for(int i = 0; i < candidatos.length; i++){
+    for(int i = 0; i < candidatos[][].length; i++){
         System.out.println("candidato " + candidatos[i] + " digite " + i);
         System.out.println("por quantos?: ");
         diferenca1 = sc.nextInt();

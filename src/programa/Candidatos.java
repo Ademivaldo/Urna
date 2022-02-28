@@ -10,4 +10,12 @@ public Candidatos(String nome, int codigo){
     this.nome = nome;
     this.codigo = codigo;
 }
+
+
+
+@Override
+public String toString() {
+    return "Candidato [codigo=" + codigo + ", nome=" + nome + "]";
+}
+
 }

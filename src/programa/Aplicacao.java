@@ -1,5 +1,5 @@
 package programa;
-import java.util.ArrayList;
+import programa.Candidatos;
 import java.util.Scanner;
 
 public class Aplicacao{
@@ -9,35 +9,42 @@ public static void main(String[] args){
     System.out.println("Projeto de urna roubada: ");
 
     System.out.println("Quantos candidatos? ");
-    Integer totCandidatos = sc.nextInt();
+    int totCandidatos = sc.nextInt();
     sc.nextLine();
-    Candidatos[][] candidados = new Candidatos[totCandidatos][2];
+    Candidatos[] candidatos = new Candidatos[totCandidatos];
 
     for(int i = 0; i<totCandidatos; i++){
         System.out.print("Digite o nome do participante e o codigo: ");
         String nome = sc.nextLine();
-        String codigo = sc.nextLine();
-     
-       
+        int codigo = sc.nextInt();
+        candidatos[i] = new Candidatos(nome, codigo);
     }
-    System.out.println("Qual participante quer que ganhe?");
-    for(int i = 0; i < candidatos[][].length; i++){
-        System.out.println("candidato " + candidatos[i] + " digite " + i);
-        System.out.println("por quantos?: ");
-        diferenca1 = sc.nextInt();
-        sc.nextLine();
-    }
-   
-    System.out.print(" :: ");
+
+    System.out.print("Digite o codigo do campeão:");
     int campeao = sc.nextInt();
-    sc.nextLine();
+    System.out.println();
+    
 
-    System.out.println("votação: ");
-    System.out.println("Quantos vão votar?");
-    int participantes = sc.nextInt();
-    int eleitores[] = new int[participantes];
+    // votação
 
-    switch(campeao){
+    System.out.println("vamos começar a votação: ");
+    System.out.println("candidatos: ");
+    for (int i = 0; i < totCandidatos; i++){
+        System.out.println(candidatos[i].toString());
+    } 
+
+    //do {
+        System.out.print("Digite o nome do eleito: ");
+        String vazio = sc.nextLine();
+        System.out.println("Digite o codigo do candidato: ");
+        int voto = sc.nextInt();
+
+    
+    }}
+    //}while(x == 'n');
+
+
+  /*  switch(campeao){
         case 0:
         for(int i = 0; i<eleitores.length ; i++){
         System.out.println("Digite seu nome e o codigo do candidato: ");
@@ -54,4 +61,4 @@ public static void main(String[] args){
 
     sc.close();
     }
-}
+}*/

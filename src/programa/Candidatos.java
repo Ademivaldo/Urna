@@ -15,7 +15,7 @@ public Candidatos(String nome, int codigo){
 
 @Override
 public String toString() {
-    return "Candidato [codigo=" + codigo + ", nome=" + nome + "]";
+    return "Candidato nome: " + nome + ", codigo: " + codigo ;
 }
 
 }

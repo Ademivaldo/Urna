@@ -14,16 +14,15 @@ public static void main(String[] args){
     Candidatos[] candidatos = new Candidatos[totCandidatos];
 
     for(int i = 0; i<totCandidatos; i++){
-        System.out.print("Digite o nome do participante e o codigo: ");
+        System.out.print("Digite o nome do participante: ");
         String nome = sc.nextLine();
-        int codigo = sc.nextInt();
-        candidatos[i] = new Candidatos(nome, codigo);
+        candidatos[i] = new Candidatos(nome, i);
     }
 
     System.out.print("Digite o codigo do campeão:");
     int campeao = sc.nextInt();
+    sc.nextLine();
     System.out.println();
-    
 
     // votação
 
@@ -33,32 +32,35 @@ public static void main(String[] args){
         System.out.println(candidatos[i].toString());
     } 
 
-    //do {
+    //variavel local
+    char x;
+    do {
         System.out.print("Digite o nome do eleito: ");
         String vazio = sc.nextLine();
         System.out.println("Digite o codigo do candidato: ");
         int voto = sc.nextInt();
 
-    
-    }}
-    //}while(x == 'n');
+        switch(voto){
+            case 0:
+            if (campeao == 0){
+
+            }
+
+        }
+        
+        
+        
+        
+        
+        
+        System.out.println("Tem mais eleior? [s/n] ");
+         x = sc.nextLine().charAt(0);
+        
+    }while(x != 'n');
 
 
-  /*  switch(campeao){
-        case 0:
-        for(int i = 0; i<eleitores.length ; i++){
-        System.out.println("Digite seu nome e o codigo do candidato: ");
-        String nomeELei = sc.nextLine();
-        int codigo = sc.nextInt();
-        if(codigo == 0){
-        candidatos[0] = ;
-            
-        }
-    
-        }
-    }
-    
+ 
 
     sc.close();
     }
-}*/
+ }
